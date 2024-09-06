@@ -1,0 +1,13 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Rewrite rule to handle PHP files without the .php extension
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.php [L]
+
+# Optional: Set default index page
+# DirectoryIndex index.php
+# Header set Access-Control-Allow-Origin "*"
+# Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+# Header set Access-Control-Allow-Headers "Content-Type, Authorization"
