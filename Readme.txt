@@ -5,56 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AshwinArchives</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-            background-color: #f4f4f4;
-        }
-        h1, h2, h3 {
-            color: #555;
-        }
-        code {
-            background: #eee;
-            padding: 0.2em 0.4em;
-            font-size: 85%;
-            color: #d14;
-            border-radius: 4px;
-        }
-        pre {
-            background: #f5f5f5;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            overflow: auto;
-            padding: 10px;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f4f4f4;
-        }
+        body { font-family: Arial, sans-serif; line-height: 1.6; }
+        h1, h2, h3, h4 { color: #333; }
+        pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; }
+        code { background-color: #f4f4f4; padding: 2px 4px; border-radius: 3px; }
+        a { color: #1a0dab; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul { margin: 0; padding: 0; list-style: none; }
+        ul li { margin-bottom: 10px; }
     </style>
 </head>
 <body>
+
     <h1>AshwinArchives</h1>
 
     <p><strong>AshwinArchives</strong> is a PHP-based web application designed to help you store, create, and manage your educational archives efficiently. This project features secure and accessible storage solutions for your notes, with an intuitive interface for easy organization.</p>
@@ -68,9 +30,8 @@
     </ul>
 
     <h2>Database Schema</h2>
-
-    <h3><code>notes</code></h3>
-    <table>
+    <h3>notes</h3>
+    <table border="1" cellpadding="5" cellspacing="0">
         <thead>
             <tr>
                 <th>Column</th>
@@ -82,28 +43,28 @@
         </thead>
         <tbody>
             <tr>
-                <td><code>id</code></td>
+                <td>id</td>
                 <td>int(11)</td>
                 <td>No</td>
                 <td></td>
                 <td>Primary key</td>
             </tr>
             <tr>
-                <td><code>content</code></td>
+                <td>content</td>
                 <td>text</td>
                 <td>No</td>
                 <td></td>
                 <td>The content of the note</td>
             </tr>
             <tr>
-                <td><code>created_at</code></td>
+                <td>created_at</td>
                 <td>timestamp</td>
                 <td>No</td>
                 <td>current_timestamp()</td>
                 <td>Timestamp when the note was created</td>
             </tr>
             <tr>
-                <td><code>username</code></td>
+                <td>username</td>
                 <td>varchar(255)</td>
                 <td>Yes</td>
                 <td>NULL</td>
@@ -112,8 +73,8 @@
         </tbody>
     </table>
 
-    <h3><code>users</code></h3>
-    <table>
+    <h3>users</h3>
+    <table border="1" cellpadding="5" cellspacing="0">
         <thead>
             <tr>
                 <th>Column</th>
@@ -125,28 +86,28 @@
         </thead>
         <tbody>
             <tr>
-                <td><code>id</code></td>
+                <td>id</td>
                 <td>int(11)</td>
                 <td>No</td>
                 <td></td>
                 <td>Primary key</td>
             </tr>
             <tr>
-                <td><code>username</code></td>
+                <td>username</td>
                 <td>varchar(255)</td>
                 <td>No</td>
                 <td></td>
                 <td>Username for login</td>
             </tr>
             <tr>
-                <td><code>password</code></td>
+                <td>password</td>
                 <td>varchar(255)</td>
                 <td>No</td>
                 <td></td>
                 <td>Password for login</td>
             </tr>
             <tr>
-                <td><code>created</code></td>
+                <td>created</td>
                 <td>datetime</td>
                 <td>No</td>
                 <td>current_timestamp()</td>
@@ -156,6 +117,7 @@
     </table>
 
     <h2>Getting Started</h2>
+    <p>To set up and run <strong>AshwinArchives</strong>, follow these steps:</p>
     <ol>
         <li><strong>Clone the Repository</strong>:
             <pre><code>git clone https://github.com/yourusername/AshwinArchives.git</code></pre>
@@ -164,18 +126,11 @@
             <pre><code>cd AshwinArchives</code></pre>
         </li>
         <li><strong>Install Dependencies</strong>:
-            <ul>
-                <li>Ensure you have Composer installed. If not, you can download and install it from <a href="https://getcomposer.org/" target="_blank">getcomposer.org</a>.</li>
-                <li>Run Composer to install the project's dependencies:
-                    <pre><code>composer install</code></pre>
-                </li>
-            </ul>
+            <p>Ensure you have Composer installed. If not, you can download and install it from <a href="https://getcomposer.org/">getcomposer.org</a>.</p>
+            <pre><code>composer install</code></pre>
         </li>
         <li><strong>Set Up Your Environment</strong>:
-            <ul>
-                <li>Ensure you have a web server (like Apache or Nginx) with PHP support and MySQL installed.</li>
-                <li>Create a new database named <code>aa</code> and import the schema from the <code>database.sql</code> file (if provided) or manually create tables based on the schema above.</li>
-            </ul>
+            <p>Ensure you have a web server (like Apache or Nginx) with PHP support and MySQL installed. Create a new database named <code>aa</code> and import the schema from the <code>database.sql</code> file (if provided) or manually create tables based on the schema above.</p>
         </li>
         <li><strong>Configure the Database Connection</strong>:
             <p>Edit <code>db.php</code> to set your database connection details:</p>
@@ -193,10 +148,7 @@ if ($conn->connect_error) {
 ?&gt;</code></pre>
         </li>
         <li><strong>Run the Application</strong>:
-            <ul>
-                <li>Place the project directory in your web server's root directory.</li>
-                <li>Access the application via <a href="http://localhost/AshwinArchives" target="_blank">http://localhost/AshwinArchives</a> in your web browser.</li>
-            </ul>
+            <p>Place the project directory in your web server's root directory. Access the application via <a href="http://localhost/AshwinArchives">http://localhost/AshwinArchives</a> in your web browser.</p>
         </li>
     </ol>
 
@@ -210,15 +162,16 @@ if ($conn->connect_error) {
     <h2>Contact</h2>
     <p>For more information or inquiries, you can follow us on social media:</p>
     <ul>
-        <li><a href="https://x.com/iAshwinSolanki" target="_blank">Twitter</a></li>
-        <li><a href="https://www.instagram.com/iAshwinSolanki/" target="_blank">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/in/iAshwinSolanki/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://x.com/iAshwinSolanki">Twitter</a></li>
+        <li><a href="https://www.instagram.com/iAshwinSolanki/">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/iAshwinSolanki/">LinkedIn</a></li>
     </ul>
 
     <h2>License</h2>
-    <p>This project is licensed under the MIT License - see the <a href="LICENSE" target="_blank">LICENSE</a> file for details.</p>
+    <p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details.</p>
 
     <h2>Acknowledgments</h2>
     <p>Thank you to all for your attention to <strong>AshwinArchives</strong>.</p>
+
 </body>
 </html>
