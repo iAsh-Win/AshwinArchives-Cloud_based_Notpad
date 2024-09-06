@@ -32,8 +32,8 @@ created    | datetime     | No   | current_timestamp() | Timestamp when the user
 Getting Started
 
 1. Clone the Repository:
-    git clone https://github.com/yourusername/AshwinArchives.git
-
+    git clone https://github.com/iAsh-Win/AshwinArchives-Cloud_based_Notpad.git
+    
 2. Navigate to the Project Directory:
     cd AshwinArchives
 
